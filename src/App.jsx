@@ -1,6 +1,9 @@
 
 import './App.css'
 import Navbar  from './Navbar'
+import Banner from './Banner'
+
+
 
 function App() {
 
@@ -8,9 +11,8 @@ function App() {
   return (
     <>
      
-      <h1>Vite + React</h1>
       <Navbar></Navbar>
-    
+      <Banner></Banner>
      
     </>
   )
