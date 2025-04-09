@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "title": "Vintage Rolex Watch",
+      "description": "Classic 1960s Rolex in excellent condition with original box.",
+      "currentBidPrice": 3500,
+      "timeLeft": "2d 4h 30m",
+      "bidsCount": 15,
+      "image": "https://i.ibb.co.com/TDz3Mh7F/Adobe-Stock-60953364-Preview.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Antique Typewriter",
+      "description": "Remington Rand 1940s working typewriter, great for collectors.",
+      "currentBidPrice": 220,
+      "timeLeft": "1d 2h 10m",
+      "bidsCount": 8,
+      "image": "https://i.ibb.co.com/Fq85FH9V/istockphoto-1735289065-1024x1024.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Rare Comic Book",
+      "description": "First edition Spider-Man comic from 1963 in good condition.",
+      "currentBidPrice": 1200,
+      "timeLeft": "3d 6h 0m",
+      "bidsCount": 21,
+      "image": "https://i.ibb.co.com/QjQvmddw/download.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Classic Guitar",
+      "description": "Fender Stratocaster, sunburst finish, vintage 1975 model.",
+      "currentBidPrice": 890,
+      "timeLeft": "12h 15m",
+      "bidsCount": 12,
+      "image": "https://i.ibb.co.com/Ngj86gd5/images.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Luxury Handbag",
+      "description": "Chanel quilted handbag, black leather with gold chain.",
+      "currentBidPrice": 2750,
+      "timeLeft": "4d 18h",
+      "bidsCount": 34,
+      "image": "https://i.ibb.co.com/PGGXhSLP/download-1.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Sports Car Diecast Model",
+      "description": "Limited edition Lamborghini Aventador 1:18 scale model.",
+      "currentBidPrice": 95,
+      "timeLeft": "8h 40m",
+      "bidsCount": 5,
+      "image": "https://i.ibb.co.com/mC7FS1JS/download-2.jpg"
+    }
+  ]
+  
