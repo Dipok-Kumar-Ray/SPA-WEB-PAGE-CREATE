@@ -3,13 +3,22 @@ import { useEffect, useState } from 'react';
 import { IoIosHeartEmpty } from "react-icons/io";
 
 import BidBtn from './BidBtn';
+import {  toast } from 'react-toastify';
+import { IoClose } from "react-icons/io5";
 
-
+const notifyAddItem = () => toast ('Add Items to your Favorite  List')
 
 
 
 
 const BidItems = () => {
+
+
+  const removeItem = (id) => {
+    const updateAddFav = addFav.filter((item) => item.id != id)
+    setAddFav(updateAddFav);
+
+  }
  
 
 
@@ -26,6 +35,8 @@ const BidItems = () => {
     
     
     const handleClicked = (bid ) =>{
+
+      notifyAddItem();
       
       const isAlreadyFavorite = addFav.some(
         (item) => item.id === bid.id
@@ -37,8 +48,10 @@ const BidItems = () => {
       setAddFav(newAddfav)
     }
     
-
-  
+    // paoewffpfpfof
+    const [counts, setCounts]  = useState()
+  const addTotalAmount = counts + 1
+  setCounts(addTotalAmount)
 
   return (
     <div >
@@ -63,11 +76,11 @@ const BidItems = () => {
           
         </tr>
       </thead >
-      <tbody >
+      <tbody className='border-t-2 border-indigo-400'>
       {
         bids.map(bid => (
-          <tr className='border-2 border-indigo-500 ' key={bid.id}>
-            <td ><img className='w-20' src={bid.image} alt=""  /></td>
+          <tr className='border-t-2 border-indigo-400 py-4' key={bid.id}>
+            <td className='p-2' ><img className='w-25 h-25 ' src={bid.image} alt=""  /></td>
             <td>{bid.title}</td>
             <td> $ {bid.currentBidPrice}</td>
             <td>{bid.timeLeft}</td>
@@ -85,26 +98,42 @@ const BidItems = () => {
 
         </div>
 
-        <div className="right-container w-[30%] bg-slate-200 rounded-lg shadow-lg p-5 m-5 flex-row">
-         <div className='flex justify-center place-items-center gap-2  '>
-         <IoIosHeartEmpty />
-         <h1 className='text-blue-500 font-bold'>Favorite Items</h1>
+        <div className="right-container w-[40%] bg-slate-200 rounded-lg shadow-lg p-5 m-5 flex-row">
+         <div className='flex justify-center items-center gap-2  '>
+         <IoIosHeartEmpty size={35}/>
+         <h1 className='text-3xl text-gray-600 font-bold mb-8'>Favorite Items</h1>
          </div>
-         <h1>Total Bids Amount : </h1>
+        
          
           {
-            addFav.length===0 ? (<h3>No....</h3>) : (<div>
+            addFav.length===0 ? (<div><h3 className='text-2xl text-gray-600 font-semibold'>No favorites yet</h3> <p>Click the heart icon on any item to add it to your favorites</p></div>) : (<div>
 
 
 
               {
-                addFav.map((bid) => <div key={bid.id}> {bid.title}</div>)
+                addFav.map((bid) => <div className='flex border-t-2 py-2 border-indigo-500' key={bid.id} > 
+                <img className='w-16 h-16' src={bid.image} alt="" />
+                <div>                
+                <h1 className='justify-end'>{bid.title}</h1>
+                <div className='flex justify-between'>
+                  <h3> $ {bid.currentBidPrice}</h3>
+                  <h3>{bid.bidsCount}</h3>
+                </div>
+                </div>
+                <div>
+                  <button onClick={()=>removeItem(bid.id)}><IoClose size={25}/></button>
+                </div>
+                </div>)
               }
 
             </div>)
           }
-          
+           <h1 className='justify-between border-t-2 border-indigo-400 mt-8'>Total Bids Amount : $ 0000</h1>
         
+        {/* me kaj korte hoo */}
+        {
+          counts.map((total) => <p key={counts}>{total.counts}</p>)
+        }
 
 
         </div>

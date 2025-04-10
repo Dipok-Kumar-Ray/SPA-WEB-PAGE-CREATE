@@ -6,7 +6,7 @@ const Banner = () => {
     return (
            <div
       style={{
-        backgroundImage: `url('../src/assets/Banner-min.jpg')`,
+        backgroundImage: `url( https://i.ibb.co.com/mrPMdJLN/Banner-min.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
@@ -17,12 +17,12 @@ const Banner = () => {
         color: 'white',
       }}
     >
-      {/* Overlay Text Container */}
+      
       <div
         style={{
           marginLeft: '5%',
           maxWidth: '600px',
-          background: 'rgba(0, 0, 0, 0.4)', // একটু dark overlay effect
+          background: 'rgba(0, 0, 0, 0.4)', 
           padding: '30px',
           borderRadius: '10px',
         }}

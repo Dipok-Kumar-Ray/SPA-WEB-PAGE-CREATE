@@ -3,18 +3,10 @@ import Navbar from "./Navbar";
 import Banner from "./Banner";
 import BidItems from './BidItems';
 import Footer from "./Footer";
-// import { useState } from "react";
+import { ToastContainer} from 'react-toastify';
 
-
-// import { useEffect, useState } from 'react';
 
 function App() {
-
-//  const [marked, setMarked] =  useState([])
-
-//  const handleMarked = (bid) => {
-//  console.log(bid);
-//  }
 
     return (
         <>
@@ -22,8 +14,9 @@ function App() {
             <Banner></Banner>
 
             <BidItems ></BidItems>
-            {/* > handleMarked={handleMarked} */}
+            
          <Footer></Footer>
+         <ToastContainer />
         </>
     );
 }
