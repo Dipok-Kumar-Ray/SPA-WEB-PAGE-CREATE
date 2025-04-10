@@ -9,6 +9,7 @@ const Navbar = () => {
            <div className="flex justify-between  bg-base-100 shadow-sm">
   <div className="flex justify-between px-2 mx-2">
     <a className="btn btn-ghost text-xl">AuctionGallery</a>
+    {/* <h1 className='mt-20'> <span className='text-3xl font-semibold text-cyan-500'>Auction</span><span className='text-4xl font-extrabold text-yellow-400'>Gallery</span> </h1> */}
 
 <button className="btn btn-ghost normal-case text-xl">Home</button>
 <button className="btn btn-ghost normal-case text-xl">Auctions</button>
@@ -16,6 +17,8 @@ const Navbar = () => {
 <button className="btn btn-ghost normal-case text-xl">Categories</button>                    
 <button className="btn btn-ghost normal-case text-xl">How to Works</button>                    
   </div>
+
+
   <div className="flex-none">
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">

@@ -2,11 +2,15 @@ import { useEffect, useState } from 'react';
 import { SlHeart } from "react-icons/sl";
 // const [bids, setBids] = useState([]);
 
-const BidItems = () => {
+const BidItems = ({bid}) => {
+  console.log(bid);
+
+
     const [bids, setBids] = useState([]);
+    
 
     useEffect(() => {
-        fetch('public/data.json')
+        fetch('/data.json')
             .then(res => res.json())
             .then(data => setBids(data));
     }, []);
@@ -20,7 +24,7 @@ const BidItems = () => {
         </p>
       </div>
       <div className="flex">
-        <div className=" w-[70%] bg-slate-200 rounded-lg shadow-lg p-4 m-4">
+        <div className=" w-full bg-slate-200 rounded-lg shadow-lg p-4 m-4">
        
         <table>
       <thead >
@@ -42,7 +46,7 @@ const BidItems = () => {
             <td>{bid.title}</td>
             <td> $ {bid.currentBidPrice}
             <td>{bid.timeLeft}</td>
-            <td> <SlHeart /></td>
+            <button onClick={(bid) => handleMarked()}> <SlHeart /></button>
             </td>
           </tr>
         ))}
@@ -59,6 +63,9 @@ const BidItems = () => {
          <h1 className='text-blue-500 font-bold'>Favorite Items</h1>
          </div>
          <h1>Total Bids Amount : </h1>
+         {
+          bids.map((bid) => <p key={bid}>{bid.title}</p>)
+         }
         </div>
       </div>
      </div>
