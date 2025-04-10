@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Banner from "./Banner";
 import BidItems from './BidItems';
 import Footer from "./Footer";
-import { useState } from "react";
+// import { useState } from "react";
 
 
 // import { useEffect, useState } from 'react';
@@ -20,7 +20,6 @@ function App() {
         <>
             <Navbar></Navbar>
             <Banner></Banner>
-            <Footer></Footer>
 
             <BidItems ></BidItems>
             {/* > handleMarked={handleMarked} */}
