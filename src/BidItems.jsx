@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 
 import { IoIosHeartEmpty } from "react-icons/io";
@@ -6,7 +7,9 @@ import BidBtn from './BidBtn';
 import {  toast } from 'react-toastify';
 import { IoClose } from "react-icons/io5";
 
-const notifyAddItem = () => toast ('Add Items to your Favorite  List')
+const notifyAddItem = () => toast ('Add Item to your Favorite  List')
+const notifyRemoveItem = () => toast ('Remove Item Form Favorite  List')
+
 
 
 
@@ -14,9 +17,12 @@ const notifyAddItem = () => toast ('Add Items to your Favorite  List')
 const BidItems = () => {
 
 
-  const removeItem = (id) => {
+  const removeItem = (id, bid) => {
     const updateAddFav = addFav.filter((item) => item.id != id)
     setAddFav(updateAddFav);
+    notifyRemoveItem()
+    setCounts(counts - bid.currentBidPrice);
+    
 
   }
  
@@ -42,6 +48,8 @@ const BidItems = () => {
 
       notifyAddItem();
       
+     
+      
       const isAlreadyFavorite = addFav.some(
         (item) => item.id === bid.id
       );
@@ -54,8 +62,6 @@ const BidItems = () => {
      setCounts(counts + bid.currentBidPrice)
     }
     
-    
-
   return (
     <div >
       <div className="  text-start mt-10">
@@ -93,7 +99,8 @@ const BidItems = () => {
             </td>
            
           </tr>
-        ))}
+        ))
+        }
       </tbody>
     </table>
 
@@ -102,7 +109,7 @@ const BidItems = () => {
         </div>
 
         <div className="right-container w-[40%] bg-slate-200 rounded-lg shadow-lg p-5 m-5 flex-row">
-         <div className='flex justify-center items-center gap-2  '>
+         <div className='flex gap-2.5 '>
          <IoIosHeartEmpty size={35}/>
          <h1 className='text-3xl text-gray-600 font-bold mb-8'>Favorite Items</h1>
          </div>
@@ -124,18 +131,16 @@ const BidItems = () => {
                 </div>
                 </div>
                 <div>
-                  <button onClick={()=>removeItem(bid.id)}><IoClose size={25}/></button>
+                  <button onClick={()=>removeItem(bid.id, bid)}><IoClose size={30}/></button>
                 </div>
+                
                 </div>)
               }
 
             </div>)
           }
            <h1 className='justify-between border-t-2 border-indigo-400 mt-8'>Total Bids Amount : $ {counts}</h1>
-        
-      
-        
-
+    
         </div>
       </div>
      </div>

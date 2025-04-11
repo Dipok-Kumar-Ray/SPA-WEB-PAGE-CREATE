@@ -8,7 +8,7 @@ const Navbar = () => {
         <div  className='mb-10'>
            <div className="flex justify-between  bg-base-100 shadow-sm">
   <div className="flex justify-between px-2 mx-2">
-    <a className="btn btn-ghost text-xl">AuctionGallery</a>
+    <a className="btn btn-ghost text-xl"><span className='text-3xl font-semibold text-cyan-500'>Auction</span> <span className='text-4xl font-extrabold text-yellow-400'>Gallery</span></a>
     {/* <h1 className='mt-20'> <span className='text-3xl font-semibold text-cyan-500'>Auction</span><span className='text-4xl font-extrabold text-yellow-400'>Gallery</span> </h1> */}
 
 <button className="btn btn-ghost normal-case text-xl">Home</button>
