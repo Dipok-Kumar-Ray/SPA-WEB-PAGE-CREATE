@@ -32,6 +32,10 @@ const BidItems = () => {
     }, []);
 
     const [addFav, setAddFav]= useState([])
+
+
+
+    const [counts, setCounts]  = useState(0)
     
     
     const handleClicked = (bid ) =>{
@@ -46,12 +50,11 @@ const BidItems = () => {
       }
       const newAddfav = [...addFav, bid]
       setAddFav(newAddfav)
+
+     setCounts(counts + bid.currentBidPrice)
     }
     
-    // paoewffpfpfof
-    const [counts, setCounts]  = useState()
-  const addTotalAmount = counts + 1
-  setCounts(addTotalAmount)
+    
 
   return (
     <div >
@@ -66,7 +69,7 @@ const BidItems = () => {
        
         <table className='w-full border-2 border-indigo-500 '>
       <thead  className='border-2 border-indigo-500 '>
-        <tr>
+        <tr className='p-5'>
           
           <th >Item</th>
           <th >Title</th>
@@ -128,13 +131,10 @@ const BidItems = () => {
 
             </div>)
           }
-           <h1 className='justify-between border-t-2 border-indigo-400 mt-8'>Total Bids Amount : $ 0000</h1>
+           <h1 className='justify-between border-t-2 border-indigo-400 mt-8'>Total Bids Amount : $ {counts}</h1>
         
-        {/* me kaj korte hoo */}
-        {
-          counts.map((total) => <p key={counts}>{total.counts}</p>)
-        }
-
+      
+        
 
         </div>
       </div>
