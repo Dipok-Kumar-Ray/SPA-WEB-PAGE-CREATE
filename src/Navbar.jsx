@@ -13,60 +13,7 @@ const Navbar = () => {
               Gallery
             </span>
           </h1>
-        {/* <nav className="flex justify-between"> 
-          <h1 className="btn btn-ghost text-xl">
-            <span className="text-3xl font-semibold text-cyan-500">
-              Auction
-            </span>
-            <span className="text-3xl font-extrabold text-yellow-400">
-              Gallery
-            </span>
-          </h1>
-          <div className=" flex text-center justify-center">
-            <button className="btn btn-ghost normal-case text-xl">Home</button>
-            <button className="btn btn-ghost normal-case text-xl">
-              Auctions
-            </button>
-            <button className="btn btn-ghost normal-case text-xl">
-              Categories
-            </button>
-            <button className="btn btn-ghost normal-case text-xl">
-              How to Works
-            </button>
-          </div>
-
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img 
-                  alt="Tailwind CSS Navbar component"
-                  src="https://i.ibb.co.com/Z6nbTc6V/Whats-App-Image-2025-03-20-at-22-34-57-69b99829.jpg"
-                />
-              </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
-        </nav> */}
+       
         <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="flex items-center justify-between ml-19" >
@@ -111,7 +58,7 @@ const Navbar = () => {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />{" "}
                 </svg>
-                <span className="badge badge-sm indicator-item">8</span>
+                <span className="badge badge-sm indicator-item">6</span>
               </div>
             </div>
             <div
@@ -119,7 +66,7 @@ const Navbar = () => {
               className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
             >
               <div className="card-body">
-                <span className="text-lg font-bold">8 Items</span>
+                <span className="text-lg font-bold">6 Items</span>
                 <span className="text-info">Subtotal: $999</span>
                 <div className="card-actions">
                   <button className="btn btn-primary btn-block">

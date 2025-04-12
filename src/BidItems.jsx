@@ -64,8 +64,8 @@ const BidItems = () => {
     
   return (
     <div >
-      <div className="  text-start mt-10">
-        <h1 className="text-3xl font-bold">Active Auctions </h1>
+      <div className="  text-start mt-10 p-5">
+        <h1 className="text-3xl text-gray-600 font-bold mb-2">Active Auctions </h1>
         <p className="text-xl font-semibold ">
           Discover and bid on extraordinary items
         </p>
@@ -75,7 +75,7 @@ const BidItems = () => {
        
         <table className='w-full border-2 border-indigo-500 '>
       <thead  className='border-2 border-indigo-500 '>
-        <tr className='p-5'>
+        <tr className='text-gray-600 justify-baseline'>
           
           <th >Item</th>
           <th >Title</th>
@@ -122,16 +122,16 @@ const BidItems = () => {
 
               {
                 addFav.map((bid) => <div className='flex border-t-2 py-2 border-indigo-500' key={bid.id} > 
-                <img className='w-16 h-16' src={bid.image} alt="" />
+                <img className='w-16 h-16 mr-4' src={bid.image} alt="" />
                 <div>                
-                <h1 className='justify-end'>{bid.title}</h1>
+                <h1 className='justify-end '>{bid.title}</h1>
                 <div className='flex justify-between'>
                   <h3> $ {bid.currentBidPrice}</h3>
                   <h3>{bid.bidsCount}</h3>
                 </div>
                 </div>
                 <div>
-                  <button onClick={()=>removeItem(bid.id, bid)}><IoClose size={30}/></button>
+                  <button  onClick={()=>removeItem(bid.id, bid)}><IoClose   size={35}/></button>
                 </div>
                 
                 </div>)

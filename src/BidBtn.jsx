@@ -15,7 +15,7 @@ const BidBtn = ({isFavorite, handleClicked , bid}) => {
               isFavorite ? "cursor-not-allowed" : "cursor-pointer"
             }`}
           >
-            {isFavorite ? <IoIosHeart color="red" /> : <IoIosHeartEmpty />}
+            {isFavorite ? <IoIosHeart color="red" size={30} /> : <IoIosHeartEmpty />}
           </p> 
         </div>
     );
