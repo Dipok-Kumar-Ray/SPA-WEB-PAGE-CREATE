@@ -2,8 +2,17 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="mb-10">
+    <div className=" mb-10">
       <div className="flex justify-between  bg-base-100 shadow-sm">
+
+      <h1 className="btn btn-ghost text-xl">
+            <span className="text-3xl font-semibold text-cyan-500">
+              Auction
+            </span>
+            <span className="text-3xl font-extrabold text-yellow-400">
+              Gallery
+            </span>
+          </h1>
         {/* <nav className="flex justify-between"> 
           <h1 className="btn btn-ghost text-xl">
             <span className="text-3xl font-semibold text-cyan-500">
@@ -60,7 +69,8 @@ const Navbar = () => {
         </nav> */}
         <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
-    <div className="items-center justify-between" >
+    <div className="flex items-center justify-between ml-19" >
+    
                   <button className="btn btn-ghost normal-case text-xl">Home</button>
             <button className="btn btn-ghost normal-case text-xl">
               Auctions
